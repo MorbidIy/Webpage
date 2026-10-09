@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installation | Instructions</title>
+     
+    <meta name="keywords" content="Morbidly, Website, Morbid, Morbidly Mods" />
+    <meta name="description" content="Morbidly Mods"/>
+    <meta name="author" content="Morbidly Mods"/>
+       
+    <link rel="stylesheet" media="screen" href="https://openfontlibrary.org" type="text/css"/>
+    <link href="styles/styles.css" rel="stylesheet" />
+    <script src="scripts/scripts.js" defer></script>
+     
+    <script type="text/javascript" src="https://jquery.com"></script>
+    <script type="text/javascript" src="https://cloudflare.com"></script>
+    <script type="text/javascript" src="https://cloudflare.com"></script>
+     
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#entries').masonry({
+                itemSelector: '#posts',
+                columnWidth: 270
+            });
+            
+            $('.masonryWrap').infinitescroll({
+                itemSelector : "#posts",
+                navSelector : "div.navigation",
+                nextSelector : ".navigation a#next",
+                bufferPx : 1000,
+                loadingImg : "",
+                loadingText : "",
+                animation: true,
+                extraScrollPx: 100000,
+            }, function(newElements) {
+                var $newElems = $(newElements);
+                $('#entries').masonry('appended', $newElems);
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <header class="morbid-header">
+    <div class="morbid-header-inner">
+
+        <div class="morbid-logo">
+            <img src="images/morbidlytitle.png" alt="Morbidly Mods">
+        </div>
+
+        <div class="morbid-search">
+            <input
+                type="text"
+                placeholder="Search..."
+                aria-label="Search">
+        </div>
+
+        <nav class="morbid-nav">
+            <a href="index.html">Home</a>
+            <a href="gta-shop.html">Accounts</a>
+            <a href="contact.html">Purchase</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </nav>
+
+    </div>
+</header>
+    
+<div class="navigation">
+    <p id="page_nav">
+        <a style="float:right" href="#" id="next"></a>
+        <a style="float:left" href="#"></a>
+    </p>
+</div>
+
+    <div id="wrapper">
+        <div id="lbar">
+            <div id="postbar">
+                <div id="dot1">
+                    <a href="#" title="Back to Top"><img src="images/dott1.png" alt="."></a>
+                </div>
+                <div id="dot2">
+                    <a href="#" title="Minimize"><img src="images/dott2.png" alt="."></a>
+                </div>
+                <div id="dot3">
+                    <a href="#" title="Close"><img src="images/dott3.png" alt="."></a>
+                </div>
+            </div>
+
+            <div id="limg">
+                <img src="images/morbidlytitle.png" alt="Morbidly Mods">
+                <div id="desc">Welcome... to the official website for anything Morbidly Mods.</div>
+                <div id="nav">
+                    <form>
+                        <select onchange="if(this.value) window.location.href=this.value;" id="navselect">
+                            <option value="" selected>Navigation Bar</option>
+                            <option value="index.html">Home Hub</option>
+                            <option value="gta-shop.html">GTA 5 Accounts</option>
+                            <option value="bully-docs.html">Bully SE Scripts</option>
+                            <option value="https://github.com">GitHub Repo</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+     
+        <div class="autopagerize_page_element">
+            <div id="entries" class="masonryWrap">
+                
+                <!-- Independent Item 1: Marketplace Showcase Card -->
+                <div id="posts">
+                    <div id="text">
+                        <a href="gta-shop.html"><h2>GTA 5 Modded Account Tier 1</h2></a>
+                        <p style="margin-top: 5px;">Xbox Series X/S optimized next-gen baseline profiles. Includes safe level setup, verified clean recovery parameters, and unlocked starter cash reserves.</p>
+                    </div>
+                    <div id="tags"><a href="#">#gta5</a> <a href="#">#xbox</a></div>
+                </div>
+
+                <!-- Independent Item 2: Graphic Skin Showcase Card -->
+                <div id="posts">
+                    <div id="photo">
+                        <a href="bully-docs.html">
+                            <img src="images/BullyTitle.png" alt="Bully Texture Pack"/>
+                        </a>
+                    </div>
+                    <div id="text">
+                        <h2>Bully SE: Bullworth Gym Retexture</h2>
+                        <p>Complete custom replacement texture matrices for the main academy training environments. Compatible with script injectors.</p>
+                    </div>
+                    <div id="tags"><a href="#">#bullyse</a> <a href="#">#textures</a></div>
+                </div>
+
+                <!-- Independent Item 3: Status Warning Chat Box Card -->
+                <div id="posts">
+                    <div id="text">
+                        <div id="question">📋 System Notice: SilentPatch Required</div>
+                        <div class="chat">
+                            <ul>
+                                <li><strong>System:</strong> All PC Lua scripts require Derpy's Script Loader.</li>
+                                <li><strong>Notice:</strong> Install SilentPatch to prevent memory crash drops on modern versions of Windows.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="tags"><a href="#">#troubleshooting</a></div>
+                </div>
+
+                <!-- Independent Item 4: Image-Only Showcase Card -->
+                <div id="posts">
+                    <div id="photo">
+                        <a href="#">
+                            <!-- Replace this path with your real image file (e.g., images/your-mod-screenshot.png) -->
+                            <img src="images/JimmyHopkins.png" alt="Mod Showcase Image"/>
+                        </a>
+                    </div>
+                    <div id="tags"><a href="#">#showcase</a> <a href="#">#screenshot</a></div>
+                </div>
+
+                <!-- Independent Item 5: Custom Audio Player Card -->
+                <div id="posts">
+                    <div id="text">
+                        <h2>🎵 Mod Sound Asset</h2>
+                        <p style="margin: 5px 0;">Previewing custom menu music track loops built for the Bully SE script load engine injector.</p>
+                    </div>
+                    
+                    <!-- Styled Audio Controller Container -->
+                    <div style="padding: 0px 10px 10px 10px; text-align: center;">
+                        <audio controls style="width: 100%; filter: invert(1) hue-rotate(180deg);">
+                            <!-- Replace with your actual local file path -->
+                            <source src="audio/Chasing Time.mp3" type="audio/mpeg">
+                            Your browser does not support the audio player element.
+                        </audio>
+                    </div>
+                    
+                    <div id="tags"><a href="#">#audio</a> <a href="#">#bullyse</a></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="paginationhold">
+            <div id="pagination">
+                <a href="#">Previous</a>
+                <a href="#">Next</a>
+            </div>
+        </div>
+    </div>
+ 
+<div id="c"><a href="#">© Morbidly</a></div>
+ 
+</body>
+</html>

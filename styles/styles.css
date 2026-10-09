@@ -1,0 +1,434 @@
+/* ==========================================================================
+   MORBID HEADER
+   ========================================================================== */
+
+body {
+    padding-top: 90px;
+    background-color: black; 
+    background-image: url('images/left-bg.png'), url('images/right-bg.png'), url('images/tiled-bg.png'), url('images/cover-bg.png');
+    background-attachment: fixed;
+    background-position: bottom 0px left 0px, bottom 0px right 0px, top left, top left;
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+    -webkit-background-size: auto, auto, auto, cover;
+    -moz-background-size: auto, auto, auto, cover;
+    -o-background-size: auto, auto, auto, cover;
+    background-size: auto, auto, auto, cover;
+    color: white;  
+    font-family: helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 123%;
+    text-align: left;
+    padding: 0px;
+}
+
+.morbid-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background: rgba(0,0,0,.95);
+    border-bottom: 1px solid #ff0000;
+    z-index: 999999;
+}
+
+.morbid-header-inner {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.morbid-logo {
+    width: 180px;
+}
+
+.morbid-logo img {
+    display: block;
+    width: 100%;
+}
+
+.morbid-search {
+    flex: 1;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.morbid-search input {
+    width: 100%;
+    max-width: 450px;
+    height: 38px;
+    padding: 0 14px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #ff0000;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.morbid-search input:focus {
+    outline: none;
+    border-color: #ff0000;
+    box-shadow: 0 0 10px rgba(255,0,0,.25);
+}
+
+.morbid-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.morbid-nav a {
+    color: #d0d0d0;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.morbid-nav a:hover {
+    color: #ff0000;
+}
+
+/* ==========================================================================
+   MORBID FOOTER & STRUCTURAL SCREEN GAP HOOKS
+   ========================================================================== */
+
+.morbid-footer {
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 100px;
+    background: rgba(0,0,0,.95);
+    border-top: 1px solid #ff0000;
+    z-index: 999999;
+    margin-top: 40px;
+}
+
+.morbid-footer-inner {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#c {
+    font-size: 13px;
+    font-family: helvetica, sans-serif;
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1360px; /* Expanded to fit your upscaled 1060px main content boxes */
+    display: block;
+    min-height: 100vh; /* Keeps 100% of the rest of the view screen visible */
+    position: relative;
+}
+
+/* ==========================================================================
+   MORBID SIDEBAR
+   ========================================================================== */
+
+#lbar {
+    position: fixed;
+    width: 220px;
+    border: 1px solid #ff0000;
+    border-radius: 24px;
+    overflow-x: hidden;                     
+    background-color: #000;
+    z-index: 100;
+    top: 90px;                               
+    max-height: calc(100vh - 230px);         
+    
+    /* LEAVE FUNCTION ACTIVE */
+    overflow-y: auto;                       
+    box-sizing: border-box;
+
+    /* THE INVISIBLE SCROLLBAR MATRIX */
+    -ms-overflow-style: none;               
+    scrollbar-width: none;                  
+}
+
+
+#lbar::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+.retro-sidebar {
+    background: #111;
+    padding: 20px;
+    text-align: left;
+    width: 100%;             
+    box-sizing: border-box;
+}
+
+.sidebar-section { 
+    margin-bottom: 25px; 
+}
+
+.sidebar-section h3 { 
+    color: #ffffff; 
+    font-size: 13px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    margin-bottom: 12px; 
+    letter-spacing: 1px; 
+} 
+
+.sidebar-section a { 
+    display: block; 
+    color: #999; 
+    text-decoration: none; 
+    padding: 6px 0; 
+    font-size: 13px; 
+    transition: 0.2s; 
+} 
+
+.sidebar-section a:hover { 
+    color: #ff0000; 
+    padding-left: 5px;
+} 
+
+.sidebar-footer {
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid #ff0000;
+    border-radius: 14px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+}
+
+/* ==========================================================================
+   CORE ENTRIES TRACKING & GRID SIZING
+   ========================================================================== */
+
+#entries {
+    margin-left: 260px;
+    width: 1060px;
+    position: relative;
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(0, auto);
+    align-items: start;
+}
+
+/* Show the real header full-width and hide the placeholder post */
+#entries > #text:first-of-type {
+    grid-column: 1 / -1;
+}
+
+#entries > .retro-nav-container {
+    grid-column: 1 / -1;
+}
+
+/* Cards --- small cards occupy one cell; large cards occupy 2x2 cells */
+#posts {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 0; /* allow grid/flex children to shrink inside fixed grid rows */
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 1px solid #f00000;
+    background-color: #000;
+    border-radius: 24px; 
+    box-sizing: border-box;
+}
+
+#posts:not(.large-post) {
+    height: auto;
+    aspect-ratio: 250 / 150;
+    min-height: 150px;
+}
+
+.large-post {
+    grid-column: span 2;
+    grid-row: span 2;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.featured-post {
+    width: 100% !important;
+    max-width: none !important;
+    grid-column: 1 / -1;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #f00000;
+    background-color: #000;
+    border-radius: 24px; 
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.small-post-grid {
+    grid-column: span 2;
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: stretch;
+    
+}
+
+.small-post-grid > #posts {
+    margin-bottom: 0;
+}
+
+
+#photo img, .featured-post img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+#text {
+    padding: 20px; /* Upgraded text cell breathing padding boundaries */
+}
+
+#photo {
+    border: none;
+    line-height: 0;
+    width: 100%;
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+#photo img {
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    transition: all 0.4s;
+    border-radius: 22px 22px 0 0; /* Keeps rounding matching master card frames */
+}
+
+#photo:hover img {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   RETRO WIKI DUAL NAVIGATION MODULES SIZING
+   ========================================================================== */
+
+.retro-nav-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 30px 20px;
+    box-sizing: border-box;
+}
+
+.retro-nav-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #111111;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 12px 16px;
+    text-decoration: none !important;
+    transition: border-color 0.2s, background-color 0.2s;
+    height: 48px;
+    max-height: 48px;
+}
+
+.retro-nav-btn:hover {
+    background-color: #161616;
+    border-color: #ff0000 !important;
+}
+
+.btn-left { justify-content: flex-start; text-align: left; }
+.btn-right { justify-content: flex-end; text-align: right; }
+
+.nav-arrow {
+    font-size: 24px;
+    color: #666;
+    line-height: 1;
+}
+.retro-nav-btn:hover .nav-arrow {
+    color: #ff0000;
+}
+
+.nav-btn-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 12px;
+}
+
+.nav-label {
+    font-size: 10px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.nav-title {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+/* Scrollbar skin configuration matrix trackers */
+::-webkit-scrollbar { height: 5px; width: 5px; }
+::-webkit-scrollbar-thumb { background-color: #000000; }
+::-webkit-scrollbar-track { background-color: #ff0000; }
+::-webkit-scrollbar-button { background-color: #fc0000; }
+
+a:link, a:active, a:visited { color: red; text-decoration: none; transition: all 0.5s ease-in-out; }
+a:hover { color: #fff; transition: all 0.5s ease-in-out; }
+#tags { margin: 15px; text-align: right; opacity: .8; }
+#posts:hover #tags { opacity: 1; }
+.navigation { display: none !important; }
+
+/* ==========================================================================
+   SLIDING PAGES ANIMATION
+   ========================================================================== */
+
+
+#entries {
+    view-transition-name: entries-content-slide;
+}
+
+@view-transition {
+    navigation: auto;
+
+}
+
+::view-transition-group(entries-content-slide) {
+    Animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+::view-transition-old(entries-content-slide) {
+    animation-name: slide-out;
+}
+
+::view-transition-new(entries-content-slide) {
+    animation-name: slide-in;
+}
+
+@keyframes slide-out {
+    to { translate: -100vw; opacity: 0; }
+}
+
+@keyframes slide-in {
+    from { translate: 100vw; opacity: 0; }
+}

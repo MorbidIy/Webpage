@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morbidly | Bully Console Commands and Cheats Script</title>
+     
+    <meta name="keywords" content="Morbidly, Website, Morbid, Morbidly Mods" />
+    <meta name="description" content="Morbidly Mods"/>
+    <meta name="author" content="Morbidly Mods"/>
+       
+    <link rel="stylesheet" media="screen" href="https://openfontlibrary.org" type="text/css"/>
+    <link href="styles/styles.css" rel="stylesheet" />
+    
+    <script src="scripts/scripts.js" defer></script>
+    <script type="text/javascript" src="https://jquery.com"></script>
+    <script type="text/javascript" src="https://cloudflare.com"></script>
+    <script type="text/javascript" src="https://cloudflare.com"></script>
+     
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#entries').masonry({
+                itemSelector: '#posts',
+                columnWidth: 270
+            });
+            
+            $('.masonryWrap').infinitescroll({
+                itemSelector : "#posts",
+                navSelector : "div.navigation",
+                nextSelector : ".navigation a#next",
+                bufferPx : 1000,
+                loadingImg : "",
+                loadingText : "",
+                animation: true,
+                extraScrollPx: 100000,
+            }, function(newElements) {
+                var $newElems = $(newElements);
+                $('#entries').masonry('appended', $newElems);
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<header class="morbid-header">
+    <div class="morbid-header-inner">
+
+        <div class="morbid-logo">
+            <img src="images/morbidlytitle.png" alt="Morbidly Mods">
+        </div>
+
+        <div class="morbid-search">
+            <input
+                type="text"
+                placeholder="Search..."
+                aria-label="Search">
+        </div>
+
+        <nav class="morbid-nav">
+            <a href="index.html">Home</a>
+            <a href="gta-shop.html">Accounts</a>
+            <a href="contact.html">Purchase</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </nav>
+
+    </div>
+</header>
+
+<div class="navigation">
+    <p id="page_nav">
+        <a style="float:right" href="#" id="next"></a>
+        <a style="float:left" href="#"></a>
+    </p>
+</div>
+
+    <div id="wrapper">
+        <div id="lbar">
+            <div id="postbar">
+                <div id="dot1">
+                    <a href="#" title="Back to Top"><img src="images/dott1.png" alt="."></a>
+                </div>
+                <div id="dot2">
+                    <a href="#" title="Minimize"><img src="images/dott2.png" alt="."></a>
+                </div>
+                <div id="dot3">
+                    <a href="#" title="Close"><img src="images/dott3.png" alt="."></a>
+                </div>
+            </div>
+
+            <div id="limg">
+                <img src="images/morbidlytitle.png" alt="Morbidly Mods">
+                <div id="desc">Welcome... to the official website for anything Morbidly Mods.</div>
+                <div id="nav">
+                    <form>
+                        <select onchange="if(this.value) window.location.href=this.value;" id="navselect">
+                            <option value="" selected>Navigation Bar</option>
+                            <option value="index.html">Home Hub</option>
+                            <option value="gta-shop.html">GTA 5 Accounts</option>
+                            <option value="bully-docs.html">Bully SE Scripts</option>
+                            <option value="https://github.com">GitHub Repo</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+     
+        <div class="autopagerize_page_element">
+            <div id="entries" class="masonryWrap">
+                
+               <!-- Bully SE Engine Content Card -->
+                <div id="posts" class="large-post">
+                    <div id="text">
+                        <h2>💻 BULLY SE: PC ENGINE SCRIPT INSTALLATION</h2>
+                        <p style="margin: 8px 0 15px 0;">Technical implementation manual for deploying dynamic script hooks via Derpy's Script Loader infrastructure.</p>
+                        
+                        <div id="question" style="background: #2b0000; border: 1px solid #f00000; padding: 8px; font-size: 11px; color: #ff9900;">
+                            ⚠️ CRITICAL CRASH REQUIREMENT: You must integrate the modern Windows SilentPatch asset bundle before running scripts to prevent core memory drops.
+                        </div>
+
+                        <h3 style="margin-top: 15px; color: #ff0000;">DIRECTORY INSTALLATION PATHWAYS:</h3>
+                        <ol style="margin-left: 20px; font-size: 11px; line-height: 145%;">
+                            <li>Locate baseline root platform data directory folder via steamapps path structures.</li>
+                            <li>Verify file drop connection directory path: <code style="color: #ff5555; background: #111; padding: 2px 4px;">...\Derpy's Script Loader\Scripts</code></li>
+                            <li>Transfer custom compiled script variants directly into the targeted Scripts file path folder directory.</li>
+                            <li>Initialize the executable game client environment and execute the dedicated menu script trigger shortcut keys.</li>
+                        </ol>
+                    </div>
+                    <div id="tags"><a href="#">#bully-pc</a> <a href="#">#script-loader</a></div>
+                </div>
+
+            </div> <!-- This closes your #entries container -->
+        </div> <!-- This closes your .autopagerize_page_element container -->
+
+        <div id="paginationhold">
+            <div id="pagination">
+                <a href="#">Previous</a>
+                <a href="#">Next</a>
+            </div>
+        </div>
+    </div>
+ 
+<div id="c"><a href="#">© Morbidly</a></div>
+ 
+</body>
+</html>

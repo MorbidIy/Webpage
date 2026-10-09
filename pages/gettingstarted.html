@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<!-- =======================================================================
+        GLOBAL SITE METADATA & CONFIGURATIONS
+        ======================================================================= -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morbidly | Getting Started</title>
+     
+    <meta name="keywords" content="Morbidly, Website, Morbid, Morbidly Mods" />
+    <meta name="description" content="Morbidly Mods"/>
+    <meta name="author" content="Morbidly Mods"/>
+       
+    <!-- External Font Resource Link -->
+    <link rel="stylesheet" media="screen" href="https://openfontlibrary.org" type="text/css"/>
+    
+    <!-- Central Stylesheet Connection -->
+    <link href="../styles/styles.css" rel="stylesheet" />
+    
+    <!-- Local Dynamic Script File -->
+    <script src="../scripts/scripts.js" defer></script>
+</head>
+
+<body>
+
+<!-- ==========================================================================
+        FIXED TOP HEADER NAVIGATION BAR
+        ======================================================================= -->
+
+    <header class="morbid-header">
+        <div class="morbid-header-inner">
+            
+            <!-- Site Branding Header Logo -->
+            <div class="morbid-logo">
+                <img src="../images/morbidlytitle.png" alt="Morbidly Mods">
+            </div>
+
+            <!-- Global Site Search Field Input Box -->
+            <div class="morbid-search">
+                <input type="text" placeholder="Search..." aria-label="Search">
+            </div>
+
+            <!-- Header Fast-Link Shortcut Navigation Paths -->
+            <nav class="morbid-nav">
+                <a href="../index.html">Home</a>
+                <a href="/pages/gta-show.html">Accounts</a>
+                <a href="/pages/releases.html">Downloads</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Hidden Container Hooks Used For Behind-The-Scenes Page Routing -->
+    <div class="navigation">
+        <p id="page_nav">
+            <a style="float:right" href="#" id="next"></a>
+            <a style="float:left" href="#"></a>
+        </p>
+    </div>
+
+<!-- =======================================================================
+        GLOBAL WORKSPACE LAYOUT CONTAINER WRAPPER
+        ======================================================================= -->
+
+    <div id="wrapper">
+
+<!-- ===================================================================
+        LEFT HAND FIXED RETRO-SIDEBAR COMPONENT
+        =================================================================== -->
+
+        <div id="lbar">
+            <div id="limg">
+                <!-- Space reserved for sidebar specific tracking elements or logos -->
+            </div>
+
+            <div class="retro-sidebar">
+                
+                <!-- Category Section: Main Hub Navigation Links -->
+                <div class="sidebar-section">
+                    <a href="../index.html">Welcome</a>
+                    <a href="/pages/tos.html">Terms of Service</a>
+                    
+                    <h3>BULLY: Scholarship Edition (PC)</h3>
+                    <a href="/pages/gettingstarted.html">Getting Started</a>
+                    <a href="/pages/releases.html">Downloads</a>
+                </div>
+
+                <!-- Category Section: Grand Theft Auto V Information Links -->
+                <div class="sidebar-section">
+                    <h3>Grand Theft Auto: V (XBOX SERIES X/S)</h3>
+                    <s><a href="/pages/gta-services.html">Account Services</a></s>
+                    <a href="/pages/gta-show.html">Account Showcase</a>
+                    <a href="/pages/account-security.html">Account Security</a>
+                    <s><a href="/pages/purchase.html">Purchase</a></s>
+                </div>
+
+                <!-- Category Section: Tools & Diagnostic Links -->
+                 <div class="sidebar-section">
+                    <h3>UTILITIES & TROUBLESHOOTING</h3>
+                    <a href="/pages/tools.html">Standalone Tools</a>
+                    <a href="/pages/favorites.html">Endorsed Mods & Favorites</a>
+                    <a href="/pages/troubleshooting.html">Known Issues & Fixes</a>
+                </div>
+
+                <!-- Category Section: Author Info & Creator Support links -->
+                <div class="sidebar-section">
+                    <h3>SUPPORT & DEV INFO</h3>
+                    <a href="/pages/contact.html">Contact Information</a>
+                    <a href="https://ko-fi.com">Buy Me Coffee?</a>
+                </div>
+
+                
+                <!-- Sidebar Custom Credit Footer Notice -->
+                <div class="morbid-logo"><img src="/images/morbiddunce.png" alt="Morbid Dunce" /></div>
+                <div class="sidebar-footer">
+                    Powered by Morbidly
+                </div>
+                
+            </div>
+        </div> <!-- Left Bar Completely Closed -->
+
+<!-- ===================================================================
+        MAIN CONTENT CARD DISPLAY STREAM TRACK
+        =================================================================== -->
+
+        <div id="entries">
+
+<!-- ===============================================================
+        MAIN TEMPLATE FOR OVERVIEW CARD DISPLAY
+        =============================================================== -->
+
+                    <!-- Warning Display -->
+                    <div id="text">
+                        <a href=""><h2>⚠️ ALWAYS BACKUP FILES FIRST</h2></a>
+                        <p style="margin-top: 5px;">Duplicate your files into a clean folder before proceeding or making any changes. If a script or a skin is corrupt, you can swap back to the backup.</p>
+                    </div>                
+            
+                <div id="posts" class="large-post featured-post">
+                <!-- Card Inner Text Typography Content Container -->
+                <div id="text">
+                    <h1>How to Use My Scripts:</h1>
+                    <h2>Welcome to the definitive starter guide for modding BULLY: SE on PC  using Derpy's Script loader (DSL).</h2>
+                    <p>DSL takes away the hassle of older modding methods, letting you run uncompiled .luascripts instantly upon booting the game.</p>
+                    <p>Follow these steps in exact order to prep your game environment safely.</p>
+                    <br>
+                    
+                    <!-- Step One: -->
+                    <h1>Step One: The Essential Stability Patches:</h1>
+                    <p>Before installing your mod loader, you must handle BULLY's famous PC instability.</p>
+                    <li>
+                        <a href="Nexusmods.com">SilentPatch</a> is mandatory, it stops random crashes, fixes the hames memory leaks, and unlocks the frame rate safely.</a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="Nexusmods.com">Widescreen Fix</a> adjusts the game engine so HUD elements and camera ratios aren't stretched on modern widescreen aspect ratios. 
+                    </li>
+                    <br><br>
+
+
+                    <!-- Step Two: -->
+                    <h1>Step Two: Installing Derpy's Script Loader (DSL):</h1>
+                    <p>DSL acts as the backend engine that injects the custom LUA code into the game. </p>
+                    <li>
+                        <strong>Download the Loader:</strong>  Grab the latest release package of Derpy's Script Loader</a>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Extract the Files</strong> Open the downloaded .zip archive.</a>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Drop the Root:</strong> Move the DSL loader files directly into your main BULLY directory (where your Bully.exe resides).</a>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Boot the Game Once:</strong> Launch BULLY once and you can exit immediately. This forces the loader to generate your local configuration files.</a>
+                    </li>
+                    <br>
+
+                    <!-- Step Three: -->
+                    <h1>Step Three: Where to Put Your Custom Scripts:</h1>
+                    <p>Once DSL is installed, you never have to replace the games original files for scripts again. </p>
+                    <li>
+                        <strong>The Target Folder:</strong> Look inside your root folder for a newly generated directory named _derpy_script_loader, and within you will see a folder called scripts.</a>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Installing My Scripts:</strong> When downloading any of my custom scripts from the Releases section of this wiki, simply drop the uncompiled .lua file (or their specify folder) straight into that /scripts folder. They will execute automatically upon startup.</a>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Troubleshooting Advanced Mods:</strong> Some scripts require deeper system access permissions. If a script isn't triggering. open /_derpy_script_loader/dslconfig.ini in a text editor, find the line allow_system_access: false, change the value to true, and save. </a>
+                    </li>
+                    <br>    
+                </div> 
+                <!-- End Card Inner Text Container -->
+
+            </div>
+            <!-- Main Post Content Card Completely Closed -->
+
+            
+                <!-- Card Inner Text Typography Content Container -->
+                <div id="posts" class="large-post featured-post">
+                <div id="text">
+                    <h1>How to Use My Textures (Skins): </h1>
+                    <h2>Custom character skins and clothing overhauls live compressed inside the games core asset archive, World.img.</h2>
+                    <p>To install them, chose <strong>one</strong> of the to methods below.</p>
+                    <p>Follow these steps in exact order to prep your game environment safely.</p>
+                    <br>
+                    
+                    <!-- Method A: -->
+                    <h1>Method A: BULLY Skin Installer by DORKLESS:</h1>
+                    <p>If you want a painless, one-click installation process without messing with archive code, use this automated tool.</p>
+                    <li>
+                        <strong>Get the Tool:</strong> Download the BULLY Skin Installer by DORKLESS.</a>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Extract the Files</strong> Open the downloaded .zip archive.</a>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Drop the Root:</strong> Move the Skin Installer files directly into your /stream folder in the main BULLY directory.</a>
+                    </li><br>
+
+                    <li>
+                        <strong>How It Works:</strong> You should now see the install.exe along with some other content.  Drag and drop the downloaded texture files into the /skin folder and click <strong>install"</strong>.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Why Use It:</strong> It automatically injects/replaces the .nft/.nif files into the World.img file, so you don't have to manually and/or make mistakes.</a>
+                    </li><br>
+
+
+                    <!-- Method B: -->
+                    <h1>Method B: Manual Installation Via Archive Editor Tools.</h1>
+                    <p>If you prefer doing things manually or need to resolve specific mod conflicts, you can edit the files directly.</p>
+                    <li>
+                        <strong>Download a Tool</strong> Download IMG Tool or IMG Factory 2.0.</a>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Locate the Archive</strong> Navigate to your main Bully directory, open the stream folder and locate the World.img file. </a>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>How to Install:</strong> Open the World.img inside of your IMG Editor, find the original texture files you want to replace, "ie. the .nif/.nft files", import the new custom texture files, and hit <strong>Rebuild/Save</strong>.</a>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Boot the Game Once:</strong> Launch BULLY once and you can exit immediately. This forces the loader to generate your local configuration files.</a>
+                    </li>
+                    <br>    
+                </div> 
+                <!-- End Card Inner Text Container -->                
+                
+            </div> 
+            
+            
+                    <!-- Warning Display -->
+                    <div id="text">
+                        <a href=""><h2>Rule of Thumb for Modding Safely:</h2></a>
+                        <strong>Install One Mod At A Time:</strong> Never Drop 10+ scripts into your folder at once. If the game crashes, you won't know which script caused the issue.<br><br>
+                        <strong>Check Controller Inputs:</strong> Some older LUA scripts override default game inputs. If your controls start acting weird, check the scripts page for the remapping details.
+                    </div>
+            <!-- Main Post Content Card Completely Closed -->
+                
+            
+<!-- ===============================================================
+        RETRO-WIKI COHESIVE DUAL NAVIGATION BUTTONS BLOCK
+        =============================================================== -->
+
+            <div class="retro-nav-container">
+                
+                <!-- Left Button Component: Previous Page Arrow Map -->
+                <a href="/pages/tos.html" class="retro-nav-btn btn-left">
+                    <span class="nav-arrow">‹</span>
+                    <div class="nav-btn-text">
+                        <span class="nav-label">Previous</span>
+                        <span class="nav-title">Terms of Service</span>
+                    </div>
+                </a>
+
+                <!-- Right Button Component: Next Page Arrow Map -->
+                <a href="/pages/releases.html" class="retro-nav-btn btn-right">
+                    <div class="nav-btn-text">
+                        <span class="nav-label">Next</span>
+                        <span class="nav-title">Downloads</span>
+                    </div>
+                    <span class="nav-arrow">›</span>
+                </a>
+                
+            </div> <!-- Dual Navigation Buttons Block Completely Closed -->
+
+        </div> <!-- Entries Column Tracking Stream Completely Closed -->
+        
+    </div> <!-- Global Layout Wrapper Container Completely Closed -->
+
+<!-- =======================================================================
+    GLOBAL PAGE STATIC BASELINE FOOTER COMPONENT
+    ======================================================================= -->
+
+    <footer class="morbid-footer">
+        <div class="morbid-footer-inner">
+            
+            <!-- Baseline Brand Graphic Identifier -->
+            <div class="morbid-logo">
+                <img src="/images/morbidlymods.png" alt="Morbidly Mods">
+            </div>
+            
+            <!-- Global Structural Protection Rights Content -->
+            <div class="text">
+                <p>1998-2026 All Rights Reserved.</p>
+            </div>
+            
+            <!-- Digital Framework Ownership Label Anchor -->
+            <div id="c">
+                <a href="#">© Morbidly</a>
+            </div>
+            
+        </div>
+    </footer>
+ 
+</body>
+</html>
